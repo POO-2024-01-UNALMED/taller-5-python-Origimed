@@ -1,9 +1,6 @@
-from zooAnimales import *
-from zooAnimales import anfibio
-from zooAnimales import ave
-from zooAnimales import Mamifero
-from zooAnimales import reptil
-from zooAnimales import pez
+
+
+
 class Animal:
     total_animales = 0
 
@@ -15,13 +12,18 @@ class Animal:
         self.genero = genero
 
     @staticmethod
-    def total_por_tipo():
+    def totalPorTipo():
+        from zooAnimales.Mamifero import Mamifero
+        from zooAnimales.anfibio import Anfibio
+        from zooAnimales.ave import Ave
+        from zooAnimales.pez import Pez
+        from zooAnimales.reptil import Reptil
         return "Mamiferos: {}\nAves: {}\nReptiles: {}\nPeces: {}\nAnfibios: {}".format(
             Mamifero.cantidad_mamiferos(),
-            ave.cantidad_aves(),
-            reptil.cantidad_reptiles(),
-            pez.cantidad_peces(),
-            anfibio.cantidad_anfibios()
+            Ave.cantidad_aves(),
+            Reptil.cantidad_reptiles(),
+            Pez.cantidad_peces(),
+            Anfibio.cantidad_anfibios()
         )
 
     comp = "Mamiferos: 4\n" + \
@@ -38,33 +40,33 @@ class Animal:
         return "desplazarse"
 
     @staticmethod
-    def get_total_animales():
+    def getTotalAnimales():
         return Animal.total_animales
 
     @staticmethod
-    def set_total_animales(total_animales):
+    def setTotalAnimales(total_animales):
         Animal.total_animales = total_animales
 
-    def get_nombre(self):
+    def getNombre(self):
         return self.nombre
 
-    def set_nombre(self, nombre):
+    def setNombre(self, nombre):
         self.nombre = nombre
 
-    def get_edad(self):
+    def getEdad(self):
         return self.edad
 
-    def set_edad(self, edad):
+    def setEdad(self, edad):
         self.edad = edad
 
-    def get_habitat(self):
+    def getHabitat(self):
         return self.habitat
 
-    def set_habitat(self, habitat):
+    def setHabitat(self, habitat):
         self.habitat = habitat
 
-    def get_genero(self):
+    def getGenero(self):
         return self.genero
 
-    def set_genero(self, genero):
+    def setGenero(self, genero):
         self.genero = genero

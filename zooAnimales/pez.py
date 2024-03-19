@@ -1,11 +1,12 @@
-from zooAnimales import animal
+from zooAnimales.animal import Animal
 
-class Pez(animal):
+
+class Pez(Animal):
     salmones = 0
     bacalaos = 0
     total = 0
 
-    def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas):
+    def __init__(self, nombre="", edad=0, habitat="", genero="", colorEscamas="", cantidadAletas=0):
         super().__init__(nombre, edad, habitat, genero)
         self.colorEscamas = colorEscamas
         self.cantidadAletas = cantidadAletas

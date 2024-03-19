@@ -6,33 +6,33 @@ class Zoologico:
         self.ubicacion = ubicacion
         self.zonas = []
 
-    def cantidad_total_animales(self):
+    def cantidadTotalAnimales(self):
         return Zoologico.total
 
-    def agregar_zona(self, zona):
+    def agregarZonas(self, zona):
         self.zonas.append(zona)
 
-    def obtener_zonas(self):
+    def getZona(self):
         return self.zonas
 
     @staticmethod
-    def obtener_total():
+    def getTotal():
         return Zoologico.total
 
     @staticmethod
-    def establecer_total(total):
+    def setTotal(total):
         Zoologico.total = total
 
-    def obtener_nombre(self):
+    def getNombre(self):
         return self.nombre
 
-    def establecer_nombre(self, nombre):
+    def setNombre(self, nombre):
         self.nombre = nombre
 
-    def obtener_ubicacion(self):
+    def getUbicacion(self):
         return self.ubicacion
 
-    def establecer_ubicacion(self, ubicacion):
+    def setUbicacion(self, ubicacion):
         self.ubicacion = ubicacion
 
 
@@ -42,8 +42,8 @@ class Zona:
         self.zoo = zoo
         self.animales = []
 
-    def agregar_animal(self, animal):
+    def agregarAnimal(self, animal):
         self.animales.append(animal)
 
-    def cantidad_animales(self):
+    def cantidadAnimales(self):
         return len(self.animales)
